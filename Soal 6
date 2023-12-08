@@ -1,0 +1,24 @@
+Palindrom
+import java.util.Scanner;
+
+public class Palindrom {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String kata, reverse = "";
+
+        System.out.print("Masukkan kata atau frasa: ");
+        kata = scanner.nextLine();
+
+        int length = kata.length();
+
+        for (int i = length - 1; i >= 0; i--) {
+            reverse = reverse + kata.charAt(i);
+        }
+
+        if (kata.equals(reverse)) {
+            System.out.println(kata + " adalah palindrom");
+        } else {
+            System.out.println(kata + " bukan palindrom");
+        }
+    }
+}
