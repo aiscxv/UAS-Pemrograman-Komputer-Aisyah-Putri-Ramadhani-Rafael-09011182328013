@@ -1,0 +1,50 @@
+Diskon
+import java.util.Scanner;
+
+public class TokoOnline {
+
+    public static void main(String[] args) {
+        // Membuat objek scanner untuk membaca input
+        Scanner input = new Scanner(System.in);
+
+        // Membuat variabel untuk menyimpan harga barang, jumlah pembelian, dan diskon
+        double harga, jumlah, diskon;
+
+        // Membuat variabel untuk menyimpan total harga sebelum dan sesudah diskon
+        double totalSebelum, totalSesudah;
+
+        // Membaca input harga barang dari pengguna
+        System.out.print("Masukkan harga barang: ");
+        harga = input.nextDouble();
+
+        // Membaca input jumlah pembelian dari pengguna
+        System.out.print("Masukkan jumlah pembelian: ");
+        jumlah = input.nextDouble();
+
+        // Menghitung total harga sebelum diskon
+        totalSebelum = harga * jumlah;
+
+        // Menentukan diskon berdasarkan jumlah pembelian
+        if (jumlah < 5) {
+            // Jika jumlah kurang dari 5, tidak ada diskon
+            diskon = 0;
+        } else if (jumlah >= 5 && jumlah <= 10) {
+            // Jika jumlah antara 5 hingga 10, diskon 5%
+            diskon = 0.05;
+        } else if (jumlah >= 11 && jumlah <= 20) {
+            // Jika jumlah antara 11 hingga 20, diskon 10%
+            diskon = 0.1;
+        } else {
+            // Jika jumlah lebih dari 20, diskon 20%
+            diskon = 0.2;
+        }
+
+        // Menghitung total harga sesudah diskon
+        totalSesudah = totalSebelum - (totalSebelum * diskon);
+
+        // Menampilkan total harga sebelum dan sesudah diskon
+        System.out.println("Total harga sebelum diskon: " + totalSebelum);
+        System.out.println("Diskon: " + (diskon * 100) + "%");
+        System.out.println("Total harga sesudah diskon: " + totalSesudah);
+    }
+}
