@@ -25,6 +25,3 @@ Ujian: UAS Pemrograman Komputer
 
 
   
-    }
-}
-
